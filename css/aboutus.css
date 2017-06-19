@@ -1,0 +1,44 @@
+body{
+    
+    background: #DEECEC;
+}
+.heading{
+    
+    text-align: center;
+    font-family: cursive;
+    font-size: 24px;
+    font-weight: 200;
+    border-style: hidden;
+}
+
+.images{
+    
+    min-height: 400px;
+    max-height: 400px;
+    border-color: cadetblue;
+    border-style: solid;
+    border-width: thick;
+    min-width:  200px;
+    max-width: 200px;
+    border-radius: 50%;
+}
+
+.Names{
+    
+    text-align: center;
+    font-family: fantasy; 
+}
+
+.img{
+    
+    
+  /*  background-color:blanchedalmond; */
+    border-style: hidden;
+    
+}
+
+row{
+    
+    border-style: hidden;
+   
+}
