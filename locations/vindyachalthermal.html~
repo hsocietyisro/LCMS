@@ -58,9 +58,8 @@
 
       <div id="map2016" class="base">
         <iframe class="map"
-		scrolling='no'
-		src=http://bhuvan.nrsc.gov.in/map/bhuvan/embed.html?l=82.647111809877&b=24.086290394162&r=82.705004609255&t=24.109979664182&val=s></iframe>
-
+		            scrolling='no'
+		            src=http://bhuvan.nrsc.gov.in/map/bhuvan/embed.html?l=82.647111809877&b=24.086290394162&r=82.705004609255&t=24.109979664182&val=s></iframe>
       </div>
 
 
