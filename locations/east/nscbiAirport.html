@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Anrak Aluminium Factory, Andhra Pradesh</title>
+    <title>Netaji Subhas Chandra Bose International Airport </title>
+    </title>
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
     <link rel="stylesheet" href="../../css/master.css">
     <link rel="stylesheet" href="../../css/loc.css">
@@ -41,11 +42,10 @@
     <!-- Navigation-Bar ends -->
 
     <!-- Map content -->
-    <h2>Anrak Aluminium Factory, AndhraPradesh</h2>
+    <h2>Netaji Subhash Chandra Bose Airport, Kolkata</h2>
     <div class="stripe">
       <button type="button" class="yearButtons" id="btn2010">2010</button>
-      <button type="button" class="yearButtons buttonSelected" id="btn2015">2015</button>
-      <!-- please add selected class initially on the iframe button -->
+      <button type="button" class="yearButtons buttonSelected" id="btn2013">2013</button>
     </div>
     <!-- To make responsive, added in a wrapper -->
     <div class="wrapper">
@@ -53,14 +53,15 @@
 
 
       <div id="map2010" class="dated">
-          <img class="map" src="anrak2010.jpg">
+          <img class="map" src="nscbiAirport2010.JPG">
       </div>
 
-      <div id="map2015" class="base">
-        <iframe class="map"
-                scrolling='no'
-                src=http://bhuvan.nrsc.gov.in/map/bhuvan/embed.html?l=82.717870235788&b=17.589299439465&r=82.775763035166&t=17.613117455517&val=h>
-        </iframe>
+      <div id="map2013" class="base">
+	      <iframe class="map"
+		            scrolling="no"
+		            src=http://bhuvan.nrsc.gov.in/map/bhuvan/embed.html?l=88.401468632307&b=22.632533454192&r=88.489402172651&t=22.66956939627&val=s></iframe>
+
+
       </div>
 
 
@@ -68,16 +69,16 @@
 
 
     <script src="../../script/jquery-3.1.1.min.js"></script>
-	  <script src="../../script/bootstrap.min.js"></script>
+	  <script src=../"../script/bootstrap.min.js"></script>
     <script type="text/javascript">
       //Selecting map divs
       var map2010 = document.querySelector("#map2010");
-      var map2015 = document.querySelector("#map2015");
+      var map2013 = document.querySelector("#map2013");
 
       // Selecting year buttons
       var yearButtons = document.querySelectorAll(".yearButtons");    //Same Always
       var btn2010 = document.querySelector("#btn2010");
-      var btn2015 = document.querySelector("#btn2015");
+      var btn2013 = document.querySelector("#btn2013");
 
       btn2010.addEventListener("click", function(){
         for(var i = 0;i < yearButtons.length; i++){   //same in all, FROM here
@@ -85,15 +86,15 @@
         }
         this.classList.add("buttonSelected");         // To Here!
         map2010.style.display = 'block';
-        map2015.style.display = 'none';
+        map2013.style.display = 'none';
       })
 
-      btn2015.addEventListener("click", function(){
-        for(var i = 0;i < yearButtons.length; i++){
+      btn2013.addEventListener("click", function(){
+        for(var i = 0;i < yearButtons.length; i++){   //same in all, FROM here
           yearButtons[i].classList.remove("buttonSelected")
         }
-        this.classList.add("buttonSelected");
-        map2015.style.display = 'block';
+        this.classList.add("buttonSelected");         // To Here!
+        map2013.style.display = 'block';
         map2010.style.display = 'none';
       })
     </script>
