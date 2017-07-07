@@ -42,10 +42,10 @@
     <!-- Navigation-Bar ends -->
 
     <!-- Map content -->
-    <h2>CHATRAPATI SHIVAJ INTERNATIONAL AIRPORT,MUMBAI</h2>
-    <div class="yearButtons">
-      <button type="button" class="btn btn-primary" id="btn2010">2010</button>
-      <button type="button" class="btn btn-primary" id="btn2014">2014</button>
+    <h2>Netaji Subhash Chandra Bose Airport, Kolkata</h2>
+    <div class="stripe">
+      <button type="button" class="yearButtons" id="btn2010">2010</button>
+      <button type="button" class="yearButtons buttonSelected" id="btn2013">2013</button>
     </div>
     <!-- To make responsive, added in a wrapper -->
     <div class="wrapper">
@@ -53,14 +53,13 @@
 
 
       <div id="map2010" class="dated">
-          <img class="map" src="csiAirport2010.JPG">
+          <img class="map" src="nscbiAirport2010.JPG">
       </div>
 
-      <div id="map2014" class="base">
-        
-	<iframe class="map"
-		scrolling="no"
-		src=http://bhuvan.nrsc.gov.in/map/bhuvan/embed.html?l=72.860107210958&b=19.091042663347&r=72.889053610646&t=19.102887298357&val=s></iframe>
+      <div id="map2013" class="base">
+	      <iframe class="map"
+		            scrolling="no"
+		            src=http://bhuvan.nrsc.gov.in/map/bhuvan/embed.html?l=88.401468632307&b=22.632533454192&r=88.489402172651&t=22.66956939627&val=s></iframe>
 
 
       </div>
@@ -74,19 +73,28 @@
     <script type="text/javascript">
       //Selecting map divs
       var map2010 = document.querySelector("#map2010");
-      var map2014 = document.querySelector("#map2014");
+      var map2013 = document.querySelector("#map2013");
 
       // Selecting year buttons
+      var yearButtons = document.querySelectorAll(".yearButtons");    //Same Always
       var btn2010 = document.querySelector("#btn2010");
-      var btn2014 = document.querySelector("#btn2014");
+      var btn2013 = document.querySelector("#btn2013");
 
       btn2010.addEventListener("click", function(){
+        for(var i = 0;i < yearButtons.length; i++){   //same in all, FROM here
+          yearButtons[i].classList.remove("buttonSelected")
+        }
+        this.classList.add("buttonSelected");         // To Here!
         map2010.style.display = 'block';
-        map2014.style.display = 'none';
+        map2013.style.display = 'none';
       })
 
-      btn2014.addEventListener("click", function(){
-        map2014.style.display = 'block';
+      btn2013.addEventListener("click", function(){
+        for(var i = 0;i < yearButtons.length; i++){   //same in all, FROM here
+          yearButtons[i].classList.remove("buttonSelected")
+        }
+        this.classList.add("buttonSelected");         // To Here!
+        map2013.style.display = 'block';
         map2010.style.display = 'none';
       })
     </script>

@@ -1,23 +1,61 @@
-h2 {
-  text-align: center;
-  padding-bottom: 20px;
+body {
+  background-color: rgb(35, 35, 35);
+  /*text-transform: ;*/
+  padding-top: 45px;
 }
 
-.btn-primary {
-  display: inline-table;
-  margin: 0 auto;
+h2 {
+  color: white;
+  text-align: center;
+  margin: 0;
+  font-weight: normal;
+  padding: 40px 0;
+  background: #C04848;  /*for old browsers */
+  background: -webkit-linear-gradient(to right, #480048, #C04848);  /* Chrome, Safari*/
+  background: linear-gradient(to right, #480048, #C04848); /* W3C, IE 10+/ Edge, Firefox 16+,*/
+
 }
 
 .yearButtons {
-  padding-bottom: 2.5%;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  height: 3em;
+  width: 9em;
+  color: steelblue;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: 1.1em;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  outline: none;
+}
+
+.yearButtons:hover {
+  color: white;
+  background: steelblue;
+}
+
+.buttonSelected {
+  color: white;
+  background: steelblue;
+}
+
+.stripe {
+  height = 100px;
+  background-color: white;
+  text-align: center;
 }
 
 .wrapper {
     position: relative;
-    /*padding-bottom: 30%;*/
     padding-bottom: 56.25%;
-    padding-top: 25px;
     height: 0;
+    background-color: rgb(35, 35, 35);
+    transition: all 2.4s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
 }
 
 .map {
@@ -35,10 +73,3 @@ h2 {
 .dated {
   display: none;
 }
-/*.wrapper img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}*/
