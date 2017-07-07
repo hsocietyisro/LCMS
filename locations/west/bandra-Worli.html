@@ -43,9 +43,9 @@
 
     <!-- Map content -->
     <h2>Bandra Worli Sea link</h2>
-    <div class="yearButtons">
-      <button type="button" class="btn btn-primary" id="btn2009">2009</button>
-      <button type="button" class="btn btn-primary" id="btn2014">2014</button>
+    <div class="stripe">
+      <button type="button" class="yearButtons" id="btn2009">2009</button>
+      <button type="button" class="yearButtons buttonSelected" id="btn2014">2014</button>
     </div>
     <!-- To make responsive, added in a wrapper -->
     <div class="wrapper">
@@ -57,7 +57,7 @@
       </div>
 
       <div id="map2014" class="base">
-        
+
 	<iframe class="map"
 		scrolling="no"
 		src=http://bhuvan.nrsc.gov.in/map/bhuvan/embed.html?l=72.775643580632&b=19.012773603369&r=72.863577120976&t=19.049809545447&val=s></iframe>
@@ -77,15 +77,24 @@
       var map2014 = document.querySelector("#map2014");
 
       // Selecting year buttons
+      var yearButtons = document.querySelectorAll(".yearButtons");    //Same Always
       var btn2009 = document.querySelector("#btn2009");
       var btn2014 = document.querySelector("#btn2014");
 
       btn2009.addEventListener("click", function(){
+        for(var i = 0;i < yearButtons.length; i++){   //same in all, FROM here
+          yearButtons[i].classList.remove("buttonSelected")
+        }
+        this.classList.add("buttonSelected");         // To Here!
         map2009.style.display = 'block';
         map2014.style.display = 'none';
       })
 
       btn2014.addEventListener("click", function(){
+        for(var i = 0;i < yearButtons.length; i++){   //same in all, FROM here
+          yearButtons[i].classList.remove("buttonSelected")
+        }
+        this.classList.add("buttonSelected");         // To Here!
         map2014.style.display = 'block';
         map2009.style.display = 'none';
       })

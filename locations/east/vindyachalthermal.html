@@ -43,9 +43,9 @@
 
     <!-- Map content -->
     <h2>Vindyachall thermal power station (MP)</h2>
-    <div class="yearButtons">
-      <button type="button" class="btn btn-primary" id="btn2010">2010</button>
-      <button type="button" class="btn btn-primary" id="btn2016">2016</button>
+    <div class="stripe">
+      <button type="button" class="yearButtons" id="btn2010">2010</button>
+      <button type="button" class="yearButtons buttonSelected" id="btn2016">2016</button>
     </div>
     <!-- To make responsive, added in a wrapper -->
     <div class="wrapper">
@@ -75,15 +75,24 @@
       var map2016 = document.querySelector("#map2016");
 
       // Selecting year buttons
+      var yearButtons = document.querySelectorAll(".yearButtons");    //Same Always
       var btn2010 = document.querySelector("#btn2010");
       var btn2016 = document.querySelector("#btn2016");
 
       btn2010.addEventListener("click", function(){
+        for(var i = 0;i < yearButtons.length; i++){   //same in all, FROM here
+          yearButtons[i].classList.remove("buttonSelected")
+        }
+        this.classList.add("buttonSelected");         // To here
         map2010.style.display = 'block';
         map2016.style.display = 'none';
       })
 
       btn2016.addEventListener("click", function(){
+        for(var i = 0;i < yearButtons.length; i++){   //same in all, FROM here
+          yearButtons[i].classList.remove("buttonSelected")
+        }
+        this.classList.add("buttonSelected");         // To here
         map2016.style.display = 'block';
         map2010.style.display = 'none';
       })
