@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Anrak Aluminium Factory, Andhra Pradesh</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/master.css">
+    <link rel="stylesheet" href="../../css/loc.css">
+  </head>
+  <body>
+    <!-- Navigation-Bar begin -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="../../index.html" class="navbar-brand">Home</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="../../browse.html">Browse Locations</a></li>
+            <li><a href="../../aboutus.html">About us</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <!-- Navigation-Bar ends -->
+
+    <!-- Map content -->
+    <h2>Anrak Aluminium Factory, AndhraPradesh</h2>
+    <div class="yearButtons">
+      <button type="button" class="btn btn-primary" id="btn2010">2010</button>
+      <button type="button" class="btn btn-primary" id="btn2015">2015</button>
+    </div>
+    <!-- To make responsive, added in a wrapper -->
+    <div class="wrapper">
+      <!-- Divs of all years -->
+
+
+      <div id="map2010" class="dated">
+          <img class="map" src="anrak2010.jpg">
+      </div>
+
+      <div id="map2015" class="base">
+        <iframe class="map"
+                scrolling='no'
+                src=http://bhuvan.nrsc.gov.in/map/bhuvan/embed.html?l=82.717870235788&b=17.589299439465&r=82.775763035166&t=17.613117455517&val=h>
+        </iframe>
+      </div>
+
+
+    </div>
+
+
+    <script src="../../script/jquery-3.1.1.min.js"></script>
+	  <script src="../../script/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      //Selecting map divs
+      var map2010 = document.querySelector("#map2010");
+      var map2015 = document.querySelector("#map2015");
+
+      // Selecting year buttons
+      var btn2010 = document.querySelector("#btn2010");
+      var btn2015 = document.querySelector("#btn2015");
+
+      btn2010.addEventListener("click", function(){
+        map2010.style.display = 'block';
+        map2015.style.display = 'none';
+      })
+
+      btn2015.addEventListener("click", function(){
+        map2015.style.display = 'block';
+        map2010.style.display = 'none';
+      })
+    </script>
+  </body>
+</html>
