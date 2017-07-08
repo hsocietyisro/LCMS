@@ -1,12 +1,13 @@
 body{
     
     background: #DEECEC;
+    padding-top: 50px;
 }
 .heading{
     
     text-align: center;
     font-family: cursive;
-    font-size: 24px;
+    font-size: 25px;
     font-weight: 200;
     border-style: hidden;
 }
@@ -18,8 +19,8 @@ body{
     border-color: cadetblue;
     border-style: solid;
     border-width: thick;
-    min-width:  200px;
-    max-width: 200px;
+    min-width:  100px;
+    max-width: 100px;
     border-radius: 50%;
 }
 
@@ -37,7 +38,7 @@ body{
     
 }
 
-row{
+.borderless{
     
     border-style: hidden;
    

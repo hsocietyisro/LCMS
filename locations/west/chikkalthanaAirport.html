@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bandra Worli Sea link </title>
-    </title>
+    <title>Chikkalthana Airport, Aurangabad</title>
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
     <link rel="stylesheet" href="../../css/master.css">
     <link rel="stylesheet" href="../../css/loc.css">
@@ -42,27 +41,34 @@
     <!-- Navigation-Bar ends -->
 
     <!-- Map content -->
-    <h2>Bandra Worli Sea Link, Mumbai</h2>
+    <h2>Chikkalthana Airport, Aurangabad</h2>
     <div class="stripe">
-      <button type="button" class="yearButtons" id="btn2009">2009</button>
-      <button type="button" class="yearButtons buttonSelected" id="btn2014">2014</button>
+      <button type="button" class="yearButtons" id="btn2010">2010</button>
+      <button type="button" class="yearButtons buttonSelected" id="btn2013">2013</button>       
+      <button type="button" class="yearButtons" id="btn2015">2015</button>   
+      
+        <!-- please add selected class initially on the iframe button -->
     </div>
     <!-- To make responsive, added in a wrapper -->
     <div class="wrapper">
       <!-- Divs of all years -->
 
 
-      <div id="map2009" class="dated">
-          <img class="map" src="bandraWorli2010.JPG">
+      <div id="map2010" class="dated">
+          <img class="map" src="chikkalthanaAirport2010.JPG">
       </div>
+        
+        <div id="map2015" class="dated">
+          <img class="map" src="chikkalthanaAirport2015.JPG">
+      </div>
+        
+        
 
-      <div id="map2014" class="base">
-
-	<iframe class="map"
-		scrolling="no"
-		src=http://bhuvan.nrsc.gov.in/map/bhuvan/embed.html?l=72.775643580632&b=19.012773603369&r=72.863577120976&t=19.049809545447&val=s></iframe>
-
-
+      <div id="map2013" class="base">
+        <iframe class="map"
+                scrolling='no'
+                src=http://bhuvan.nrsc.gov.in/map/bhuvan/embed.html?l=75.381439962387&b=19.859085617065&r=75.410386362075&t=19.870930252075&val=s>
+        </iframe>
       </div>
 
 
@@ -73,30 +79,50 @@
 	  <script src="../../script/bootstrap.min.js"></script>
     <script type="text/javascript">
       //Selecting map divs
-      var map2009 = document.querySelector("#map2009");
-      var map2014 = document.querySelector("#map2014");
+      var map2010 = document.querySelector("#map2010");
+      var map2015 = document.querySelector("#map2015");
+      var map2013 = document.querySelector("#map2013");
 
       // Selecting year buttons
       var yearButtons = document.querySelectorAll(".yearButtons");    //Same Always
-      var btn2009 = document.querySelector("#btn2009");
-      var btn2014 = document.querySelector("#btn2014");
-
-      btn2009.addEventListener("click", function(){
+      
+        var btn2010 = document.querySelector("#btn2010");
+        var btn2015 = document.querySelector("#btn2015"); 
+        var btn2013 = document.querySelector("#btn2013");
+        
+      btn2010.addEventListener("click", function(){
         for(var i = 0;i < yearButtons.length; i++){   //same in all, FROM here
           yearButtons[i].classList.remove("buttonSelected")
         }
         this.classList.add("buttonSelected");         // To Here!
-        map2009.style.display = 'block';
-        map2014.style.display = 'none';
+        map2010.style.display = 'block';
+        map2015.style.display = 'none'
+        map2013.style.display = 'none';
+          
       })
 
-      btn2014.addEventListener("click", function(){
+       
+      btn2015.addEventListener("click", function(){
         for(var i = 0;i < yearButtons.length; i++){   //same in all, FROM here
           yearButtons[i].classList.remove("buttonSelected")
         }
         this.classList.add("buttonSelected");         // To Here!
-        map2014.style.display = 'block';
-        map2009.style.display = 'none';
+        map2010.style.display = 'none';
+        map2015.style.display = 'block'
+        map2013.style.display = 'none';
+      })
+        
+           
+     
+        
+      btn2013.addEventListener("click", function(){
+        for(var i = 0;i < yearButtons.length; i++){
+          yearButtons[i].classList.remove("buttonSelected")
+        }
+        this.classList.add("buttonSelected");
+        map2010.style.display = 'none';
+        map2015.style.display = 'none'
+        map2013.style.display = 'block';
       })
     </script>
   </body>
