@@ -1,1 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Comonwealth Games Village</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/master.css">
+    <link rel="stylesheet" href="../../css/loc.css">
+  </head>
+  <body>
+    <!-- Navigation-Bar begin -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="../../index.html" class="navbar-brand">Home</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="../../browse.html">Browse Locations</a></li>
+            <li><a href="../../aboutus.html">About us</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <!-- Navigation-Bar ends -->
 
+    <!-- Map content -->
+    <h2>Commonwealth Games Village</h2>
+    <div class="stripe">
+      <button type="button" class="yearButtons" id="btn2010">2010</button>
+      <button type="button" class="yearButtons buttonSelected" id="btn2014">2014</button>
+      <!-- please add selected class initially on the iframe button -->
+    </div>
+    <!-- To make responsive, added in a wrapper -->
+    <div class="wrapper">
+      <!-- Divs of all years -->
+
+
+      <div id="map2010" class="dated">
+          <img class="map" src="commonWealthGamesVillage2010.JPG">
+      </div>
+
+      <div id="map2014" class="base">
+        <iframe class="map"
+                scrolling='no'
+                src=http://bhuvan.nrsc.gov.in/map/bhuvan/embed.html?l=77.268237805364&b=28.61252390361&r=77.282711005208&t=28.618446221114&val=s>
+        </iframe>
+      </div>
+
+
+    </div>
+
+
+    <script src="../../script/jquery-3.1.1.min.js"></script>
+	  <script src="../../script/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      //Selecting map divs
+      var map2010 = document.querySelector("#map2010");
+      var map2014 = document.querySelector("#map2014");
+
+      // Selecting year buttons
+      var yearButtons = document.querySelectorAll(".yearButtons");    //Same Always
+      var btn2010 = document.querySelector("#btn2010");
+      var btn2014 = document.querySelector("#btn2014");
+
+      btn2010.addEventListener("click", function(){
+        for(var i = 0;i < yearButtons.length; i++){   //same in all, FROM here
+          yearButtons[i].classList.remove("buttonSelected")
+        }
+        this.classList.add("buttonSelected");         // To Here!
+        map2010.style.display = 'block';
+        map2014.style.display = 'none';
+      })
+
+      btn2014.addEventListener("click", function(){
+        for(var i = 0;i < yearButtons.length; i++){
+          yearButtons[i].classList.remove("buttonSelected")
+        }
+        this.classList.add("buttonSelected");
+        map2014.style.display = 'block';
+        map2010.style.display = 'none';
+      })
+    </script>
+  </body>
+</html>

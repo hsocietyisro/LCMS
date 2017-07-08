@@ -1,5 +1,6 @@
 body {
   padding-top: 70px;
+  background-color: aliceblue;
 }
 
 h1 img {
@@ -18,4 +19,14 @@ hr {
 
 .zoneBox {
   margin: 20px 50px;
+}
+
+.borderless{
+    
+    border-style: hidden;
+}
+
+.img{
+    
+    background-color: cadetblue;
 }
