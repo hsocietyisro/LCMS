@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Vindyachall thermal power station (MP)
-    </title>
+    <title>Banglore Airport , Banglore</title>
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
     <link rel="stylesheet" href="../../css/master.css">
     <link rel="stylesheet" href="../../css/loc.css">
@@ -42,25 +41,36 @@
     <!-- Navigation-Bar ends -->
 
     <!-- Map content -->
-    <h2>Vindyachall thermal power station (MP)</h2>
+    <h2>Banglore Airport , Banglore</h2>
     <div class="stripe">
+      <button type="button" class="yearButtons" id="btn1978">1978</button>
       <button type="button" class="yearButtons" id="btn2010">2010</button>
-      <button type="button" class="yearButtons buttonSelected" id="btn2016">2016</button>
+      <button type="button" class="yearButtons" id="btn2014">2014</button>    
+      <button type="button" class="yearButtons buttonSelected" id="btn2017">2017</button>
+        <!-- please add selected class initially on the iframe button -->
     </div>
     <!-- To make responsive, added in a wrapper -->
     <div class="wrapper">
       <!-- Divs of all years -->
 
 
-      <div id="map2010" class="dated">
-          <img class="map" src="vindhyachal2010.JPG">
+      <div id="map1978" class="dated">
+          <img class="map" src="bangaloreAirport1978.JPG">
+      </div>
+        
+        <div id="map2010" class="dated">
+          <img class="map" src="bangaloreAirport2010.JPG">
+      </div>
+        
+        <div id="map2014" class="dated">
+          <img class="map" src="bangaloreAirport2014.JPG">
       </div>
 
-      <div id="map2016" class="base">
+      <div id="map2017" class="base">
         <iframe class="map"
-		scrolling='no'
-		src=http://bhuvan.nrsc.gov.in/map/bhuvan/embed.html?l=82.647111809877&b=24.086290394162&r=82.705004609255&t=24.109979664182&val=s></iframe>
-
+                scrolling='no'
+                src=http://bhuvan.nrsc.gov.in/map/bhuvan/embed.html?l=77.69594096696&b=13.195462303249&r=77.715478177424&t=13.203691320507&val=s>
+        </iframe>
       </div>
 
 
@@ -71,30 +81,64 @@
 	  <script src="../../script/bootstrap.min.js"></script>
     <script type="text/javascript">
       //Selecting map divs
+      var map1978 = document.querySelector("#map1978");
       var map2010 = document.querySelector("#map2010");
-      var map2016 = document.querySelector("#map2016");
+      var map2014 = document.querySelector("#map2014");
+      var map2017 = document.querySelector("#map2017");
 
       // Selecting year buttons
       var yearButtons = document.querySelectorAll(".yearButtons");    //Same Always
-      var btn2010 = document.querySelector("#btn2010");
-      var btn2016 = document.querySelector("#btn2016");
+      
+        var btn1978 = document.querySelector("#btn1978");
+        var btn2010 = document.querySelector("#btn2010");
+        var btn2014 = document.querySelector("#btn2014");     
+        var btn2017 = document.querySelector("#btn2017");
+        
+      btn1978.addEventListener("click", function(){
+        for(var i = 0;i < yearButtons.length; i++){   //same in all, FROM here
+          yearButtons[i].classList.remove("buttonSelected")
+        }
+        this.classList.add("buttonSelected");         // To Here!
+        map1978.style.display = 'block';
+        map2010.style.display = 'none'
+        map2014.style.display = 'none'
+        map2017.style.display = 'none';
+          
+      })
 
+       
       btn2010.addEventListener("click", function(){
         for(var i = 0;i < yearButtons.length; i++){   //same in all, FROM here
           yearButtons[i].classList.remove("buttonSelected")
         }
-        this.classList.add("buttonSelected");         // To here
-        map2010.style.display = 'block';
-        map2016.style.display = 'none';
+        this.classList.add("buttonSelected");         // To Here!
+        map1978.style.display = 'none';
+        map2010.style.display = 'block'
+        map2014.style.display = 'none'
+        map2017.style.display = 'none';
       })
-
-      btn2016.addEventListener("click", function(){
+        
+           
+      btn2014.addEventListener("click", function(){
         for(var i = 0;i < yearButtons.length; i++){   //same in all, FROM here
           yearButtons[i].classList.remove("buttonSelected")
         }
-        this.classList.add("buttonSelected");         // To here
-        map2016.style.display = 'block';
-        map2010.style.display = 'none';
+        this.classList.add("buttonSelected");         // To Here!
+        map1978.style.display = 'none';
+        map2010.style.display = 'none'
+        map2014.style.display = 'block'
+        map2017.style.display = 'none';
+      })
+        
+      btn2017.addEventListener("click", function(){
+        for(var i = 0;i < yearButtons.length; i++){
+          yearButtons[i].classList.remove("buttonSelected")
+        }
+        this.classList.add("buttonSelected");
+        map1978.style.display = 'none';
+        map2010.style.display = 'none'
+        map2014.style.display = 'none'
+        map2017.style.display = 'block';
       })
     </script>
   </body>
