@@ -1,6 +1,7 @@
 body {
   padding-top: 70px;
-  background-color: aliceblue;
+  background: rgb(35, 40, 48);
+  /*background-color: aliceblue;*/
 }
 
 h1 img {
@@ -17,16 +18,34 @@ hr {
   background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
 }
 
+.navbar-inverse {
+  background: #2c3e50;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+  color: white;
+}
+
+.navbar-inverse .navbar-brand {
+  color: white;
+}
+
+.navbar-inverse .navbar-brand:hover{
+  border-bottom: 1px solid white;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+  border-bottom: 1px solid white;
+}
+
 .zoneBox {
   margin: 20px 50px;
 }
 
-.borderless{
-    
+.borderless {
     border-style: hidden;
 }
 
-.img{
-    
-    background-color: cadetblue;
+.img {
+  background-color: cadetblue;
 }

@@ -10,7 +10,7 @@
   </head>
   <body>
     <!-- Navigation-Bar begin -->
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -47,7 +47,7 @@
         <h1><img src="images/isro.png" id="isroLogo"> Landscape Change Monitoring System</h1>
         <p>BHUVAN based system which monitors major change in selected areas through satellite imagery.</p>
       </div>
-      
+
     </div>
     <!-- Header content ends -->
 
@@ -55,19 +55,19 @@
     <br>
       <!-- borderless class to remove borders around images -->
     <div class="container borderless">
-        
+
       <div class="row borderless">
-        <div class="col-lg-6 col-sm-6 thumbnail borderless">
-					<img src="images/north.jpg">
+        <div class="col-lg-6 col-sm-6 thumbnail borderless scroll">
+          <a href="browse.html" data-id="scrollNorth"><img src="images/north.jpg"></a>
 				</div>
-        <div class="col-lg-6 col-sm-6 thumbnail borderless">
-					<img src="images/south.jpg">
+        <div class="col-lg-6 col-sm-6 thumbnail borderless scroll">
+					<a href="browse.html" data-id="scrollSouth"><img src="images/south.jpg"></a>
 				</div>
-        <div class="col-lg-6 col-sm-6 thumbnail borderless">
-					<img src="images/east.jpg">
+        <div class="col-lg-6 col-sm-6 thumbnail borderless scroll">
+					<a href="browse.html" data-id="scrollEast"><img src="images/east.jpg"></a>
 				</div>
-        <div class="col-lg-6 col-sm-6 thumbnail borderless">
-					<img src="images/west.jpg">
+        <div class="col-lg-6 col-sm-6 thumbnail borderless scroll">
+					<a href="browse.html" data-id="scrollWest"><img src="images/west.jpg"></a>
 				</div>
             </div>
       </div>
@@ -77,8 +77,11 @@
     <hr>
     <br>
     <br>
-    <script src="./script/jquery-3.1.1.min.js"></script>
-	  <script src="./script/bootstrap.min.js"></script>
+
+
+    <script src="script/jquery-3.1.1.min.js"></script>
+    <script src="script/scroll.js"></script>
+	  <script src="script/bootstrap.min.js"></script>
     <script type="text/javascript" src="script/lcms.js"></script>
   </body>
 </html>
