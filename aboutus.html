@@ -4,14 +4,15 @@
       <meta http-equiv="X-IA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/master.css">
       <link rel="stylesheet" href="css/aboutus.css">
       <title> LCMS Team</title>
     </head>
 
 
 <body>
-    
+
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -36,60 +37,67 @@
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Search">
             </div>
-            <button type="submit" class="btn btn-default">Submit</button>
+            <button type="submit" class="btn btn-default"><a href="./browse.html">Submit</a></button>
           </form>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
     <!-- Navigation-Bar ends -->
-    
-    
-    
-    
-    <div class="container borderlesss">
-        <div class="jumbotron">
-     <h1 class="heading">About Us</h1>
-            <br / >
-    <img src="images/india.jpg" height="400px" width="100%">
-    <br/> 
-    <br/>
-    <br/>   
-    <p>
-        We created this project so that people can see landscape changes in India over the past few years.
-        We have used bhuvan maps , which is created by India Space and Research Organization (ISRO) and used images available in bhuvan.
-        This project shows landscape changes which have occured over a recent years in Indian landscape
-    </p>
+
+
+
+
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="heading">About Us</h1>
+        <img src="images/bhuvanLogo.png" id="bhuvanLogo">
+        <p>
+          We created this project so that people can see landscape changes in India over the past few years.
+          We have used bhuvan maps , which is created by India Space and Research Organization (ISRO) and used images available in bhuvan.
+          This project shows landscape changes which have occured over a recent years in Indian landscape
+        </p>
+      </div>
+
+      <br>
+
+      <div class="jumbotron">
+        <h1 class="heading">Our Team</h1>
+
+        <div class="row">
+          <div class="vinodSir">
+            <div class="col-lg-6 col-sm-3">
+             <img src="images/Vinod-Bothale-Sir.png">
+            </div>
+            <div class="col-lg-6 col-sm-8">
+              <h3>Dr. Vinod M Bothale<br>(Project Guide)</h3>
+              <p>Group Director, Geoportals and Web GIS Services.<br> NRSC (National Remote Sensing Center, India)</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row">
+
+          <div class="col-lg-4 col-sm-4 thumbnail img">
+					   <img class="images" src="images/harsh.jpg">
+              <h2 class="Names"> Harsh Manwani</h2>
+          </div>
+
+          <div class="col-lg-4 col-sm-4 thumbnail img">
+					  <img class="images" src="images/hridayesh.jpg">
+            <h2 class="Names"> Hridayesh Sharma</h2>
+				  </div>
+
+          <div class="col-lg-4 col-sm-4 thumbnail img">
+					  <img class="images" src="images/harshvarddhan.jpg">
+            <h2 class="Names"> Harshvarddhan Rajpurohit</h2>
+				  </div>
+        </div>
+      </div>
     </div>
 
-   <br/>
-    <br/>
-       
-     <div class="container borderless">
-          <div class="jumbotron">
-               <h1 class="heading">Our Team</h1>
-              <br/><br/>
-      <div class="row borderless">
-        
-        <div class="col-lg-4 col-sm-4 thumbnail img">
-					<img class="images" src="images/harsh.jpg">
-                    <h2 class="Names"> Harsh Manwani</h2>
-            	
-          </div>
-        <div class="col-lg-4 col-sm-4 thumbnail img">
-					<img class="images" src="images/hridayesh.jpg">
-                    <h2 class="Names"> Hridayesh Sharma</h2>
-				</div>
-          
-          <div class="col-lg-4 col-sm-4 thumbnail img">
-					<img class="images" src="images/harsh2.jpg">
-                    <h2 class="Names"> Harsh Rajpurohit</h2>
-				</div>
-              </div>
 
-    
-
-    <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  
+    <script src="script/jquery-3.1.1.min.js"></script>
+	  <script src="script/bootstrap.min.js"></script>
   </body>
 </html>
