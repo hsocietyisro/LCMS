@@ -5,13 +5,14 @@ $(document).ready(function(){
 
     // check page id, then scroll to its div
     if(get_id)
-        scrollToID(get_id, 1100);
+        scrollToID(get_id, 850);
+        sessionStorage.removeItem('pg_id');
 
     // click event to scroll to div
-    $('.scroll a').on('click', function(){
+    $('.homeZone a').on('click', function(){
         var id = '#'+$(this).data('id');
         sessionStorage.setItem('pg_id', id);
-        scrollToID(id, 1100);
+        scrollToID(id, 850);
     });
 
 });

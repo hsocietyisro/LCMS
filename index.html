@@ -34,7 +34,7 @@
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Search">
             </div>
-            <button type="submit" class="btn btn-default">Submit</button>
+            <button type="submit" class="btn btn-default"><a href="./browse.html">Submit</a></button>
           </form>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
@@ -43,45 +43,60 @@
 
     <!-- Header content begins-->
     <div class="container">
-      <div class=" jumbotron ">
-        <h1><img src="images/isro.png" id="isroLogo"> Landscape Change Monitoring System</h1>
+      <div class=" jumbotron">
+        <div class="row">
+          <img src="images/isro.png" id="isroLogo" class="col-lg-2 col-xs-3">
+          <h1 class="col-lg-8 col-xs-8" id="lcms"> Landscape Change Monitoring System</h1>
+        </div>
         <p>BHUVAN based system which monitors major change in selected areas through satellite imagery.</p>
       </div>
-
     </div>
     <!-- Header content ends -->
 
     <!-- zones in grid -->
-    <br>
-      <!-- borderless class to remove borders around images -->
-    <div class="container borderless">
+    <div class="container">
+      <div class="row">
 
-      <div class="row borderless">
-        <div class="col-lg-6 col-sm-6 thumbnail borderless scroll">
-          <a href="browse.html#scrollNorth" data-id="scrollNorth"><img src="images/north.jpg"></a>
+        <div id="homeNorth" class="col-lg-6 col-sm-6 homeZone">
+          <div class="thumbnail">
+            <img src="images/north.jpg" alt="">
+            <a href="browse.html" data-id="scrollNorth"></a>
+          </div>
 				</div>
-        <div class="col-lg-6 col-sm-6 thumbnail borderless scroll">
-					<a href="browse.html#scrollSouth" data-id="scrollSouth"><img src="images/south.jpg"></a>
+
+        <div id="homeEast" class="col-lg-6 col-sm-6 homeZone">
+          <div class="thumbnail">
+            <img src="images/east.jpg" alt="">
+            <a href="browse.html" data-id="scrollEast"></a>
+          </div>
+
+        </div>
+
+        <div id="homeWest" class="col-lg-6 col-sm-6 homeZone">
+          <div class="thumbnail">
+            <img src="images/west.jpg" alt="">
+            <a href="browse.html" data-id="scrollWest"></a>
+          </div>
+
 				</div>
-        <div class="col-lg-6 col-sm-6 thumbnail borderless scroll">
-					<a href="browse.html#scrollEast" data-id="scrollEast"><img src="images/east.jpg"></a>
+
+        <div id="homeSouth" class="col-lg-6 col-sm-6 homeZone">
+          <div class="thumbnail">
+            <img src="images/south.jpg" alt="">
+            <a href="browse.html" data-id="scrollSouth"></a>
+          </div>
 				</div>
-        <div class="col-lg-6 col-sm-6 thumbnail borderless scroll">
-					<a href="browse.html#scrollWest" data-id="scrollWest"><img src="images/west.jpg"></a>
-				</div>
-            </div>
+
       </div>
     </div>
     <!-- zones grid over -->
     <br>
     <hr>
     <br>
-    <br>
-
 
     <script src="script/jquery-3.1.1.min.js"></script>
     <script src="script/scroll.js"></script>
 	  <script src="script/bootstrap.min.js"></script>
-    <script type="text/javascript" src="script/lcms.js"></script>
+    <!-- <script type="text/javascript" src="script/lcms.js"></script> -->
   </body>
 </html>
