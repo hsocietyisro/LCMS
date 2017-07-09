@@ -1,5 +1,6 @@
 body {
-  background-color: rgb(35, 35, 35);
+  /*background-color: rgb(35, 35, 35);*/
+  background: #232830;
   /*text-transform: ;*/
   padding-top: 45px;
 }
@@ -52,7 +53,8 @@ h1 {
     position: relative;
     padding-bottom: 56.25%;
     height: 0;
-    background-color: rgb(35, 35, 35);
+    background: #232830;
+    /*background-color: rgb(35, 35, 35);*/
     transition: all 2.4s;
     -webkit-transition: all 0.4s;
     -moz-transition: all 0.4s;
